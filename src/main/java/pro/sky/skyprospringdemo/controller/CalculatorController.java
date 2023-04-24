@@ -29,7 +29,7 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
             return "Отсутствуют входные значения!";
         }
-        return calculatorService.plus(num1, num2 );
+        return num1 + " + " + num2 + " = " + calculatorService.plus(num1, num2 );
 
     }
 
@@ -41,7 +41,7 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
         return "Отсутствуют входные значения!";
     }
-        return calculatorService.minus(num1,num2);
+        return num1+" - "+ num2+" = "+calculatorService.minus(num1,num2);
 
     }
     @GetMapping("/multiply")
@@ -52,7 +52,7 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
             return "Отсутствуют входные значения!";
         }
-        return calculatorService.multiply(num1,num2);
+        return num1+" * "+ num2+" = "+calculatorService.multiply(num1,num2);
 
     }
     @GetMapping("/divide")
@@ -63,7 +63,7 @@ public class CalculatorController {
         if (num2 == null) {
             return "Деление на ноль запрещено!";
         }
-        return calculatorService.divide(num1,num2);
+        return num1+" / "+ num2+" = "+calculatorService.divide(num1,num2);
 
     }
 }
