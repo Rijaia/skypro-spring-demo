@@ -60,9 +60,7 @@ public class CalculatorController {
             @RequestParam(name = "num1", required = false) Integer num1,
             @RequestParam(name = "num2", required = false) Integer num2
     ) {
-        if (num2 == null) {
-            return "Деление на ноль запрещено!";
-        }
+
         return num1+" / "+ num2+" = "+calculatorService.divide(num1,num2);
 
     }

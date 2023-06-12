@@ -23,7 +23,10 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
     @Override
-    public double divide(Integer num1, Integer num2) {
+    public double divide(double num1, double num2) {
+        if (num2 == 0) {
+            throw new IllegalArgumentException("На ноль делить нельзя!");
+        }
         return (double) num1 / num2;
     }
 }
